@@ -1,5 +1,5 @@
 import './login.css'
-import Seepass from '@assets/icons/Seepass.svg'
+import Seepass from '../../assets/icons/Seepass.svg'
 export function Login() {
     return(
         <div className='flex justify-center'>
@@ -17,7 +17,7 @@ export function Login() {
                 </label>
                 <div className='relative'>
                 <input 
-                    className="shadow appearance-none border border-red-500 pr-[36px] pl-3 rounded w-[382px] h-[41px] py-2 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
+                    className="shadow appearance-none border  pr-[36px] pl-3 rounded w-[382px] h-[41px] py-2 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
                     id="password" 
                     type="password" 
                     placeholder="password" 
