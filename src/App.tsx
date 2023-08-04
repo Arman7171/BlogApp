@@ -1,9 +1,12 @@
+import { withCookies } from 'react-cookie';
+import { Authorization } from './Layout/Authorization/Authorization';
 
 function App() {
   return (
-    <div className="App">
+    <div className='h-100'>
+      <Authorization />
     </div>
   );
 }
 
-export default App;
+export default withCookies(App);
