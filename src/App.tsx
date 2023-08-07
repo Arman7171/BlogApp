@@ -1,4 +1,3 @@
-import { withCookies } from "react-cookie";
 import { Authorization } from "./Layout/Authorization/Authorization";
 import { Dashboard } from "./Layout/Dashboard/Dashboard";
 import type { RootState } from "@store/store";
@@ -13,4 +12,4 @@ function App() {
   );
 }
 
-export default withCookies(App);
+export default App;

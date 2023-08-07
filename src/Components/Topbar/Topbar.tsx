@@ -15,7 +15,7 @@ export const Topbar: FC = () => {
             </div>
             <div className="flex">
                 <Button name="Create post" />
-                <span className="pr-3 pl-9">
+                <span className="pr-4 pl-10">
                     <img src={Topline} alt="" />
                 </span>
                 <Button name="GO" icon={Menu} />

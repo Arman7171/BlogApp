@@ -2,6 +2,7 @@ import { Topbar } from "@components/Topbar/Topbar"
 import { Sidebar } from "@components/Sidebar/Sidebar"
 import { FC } from "react"
 import './dashboard.css'
+import { Routing } from "@src/Routeing";
 
 export const Dashboard: FC = () => {
     return(
@@ -9,7 +10,7 @@ export const Dashboard: FC = () => {
             <Topbar />
             <Sidebar />
             <div className="content">
-                content
+                <Routing />
             </div>
         </div>
     )
