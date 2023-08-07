@@ -7,8 +7,15 @@ import { Button } from '@components/Button/Button'
 import { Link } from 'react-router-dom'
 import { tokenGenerator } from '@src/utils/tokenGenerator'
 import Cookies from 'js-cookie'
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux'
+import { login } from '@features/Auth/authSlice'
 
 export const Login: FC = () => {
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const goDashbord = () => navigate('/dashbord')
 
     const {
         handleSubmit,
@@ -17,9 +24,11 @@ export const Login: FC = () => {
     } = useForm()
 
     const sendData = (data: any) => {
-        Cookies.set('cookiesName', tokenGenerator())
+        let token = tokenGenerator()
+        Cookies.set('token', token)
+        dispatch(login(token))
         console.log('sended------', data);
-        
+        goDashbord()
     }
 
     return(

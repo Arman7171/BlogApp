@@ -1,14 +1,14 @@
 import { FC } from "react"
 import Image from '@assets/img/login.png'
 import Logo from '@assets/img/AFSlogo.png'
-import { Routeing } from "@src/Routeing"
+import { Routing } from "@src/Routeing"
 
 export const Authorization: FC = () => {
     return(
         <div>
             <div className='grid login grid-cols-2'>
                 <div className='grid content-center'>
-                    <Routeing />
+                    <Routing />
                 </div>
                 <div className='h-100 relative'>
                     <img src={Image} alt="" className='h-[100vh] object-cover w-[100%]' />
