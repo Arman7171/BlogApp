@@ -1,16 +1,27 @@
 import { FC } from "react"
 import './card.css'
-import City from '@assets/blogimg/city.jpg'
+import { Button } from "@components/Button/Button"
 
-export const Card: FC = () => {
+type CardProps = {
+    date: string,
+    img: string,
+    title: string,
+    desc?: string,
+    publish: boolean,
+    bigSize?: Boolean,
+}
+
+export const Card: FC<CardProps> = ({date, title, img, desc, publish, bigSize}) => {
+    
     return(
-        <div className="card">
-            <img src={City} alt="" />
+        <div className={`card ${bigSize ? 'big' : ''}`}>
+            <img src={img} alt="" />
             <div className="info">
-                <p>01/07/2022</p>
-                <h6 className="text-ellipsis line-clamp-2 ...">asjoiad nsadjioasu asdjioas aoisjdaoijn dfpok</h6>
-                <p>assadkaj asdhas iojiji oijioj oiajsd</p>
+                <p>{date}</p>
+                <h6 className="text-ellipsis line-clamp-2 ...">{title}</h6>
+                {desc && <p>{desc}</p>}
             </div>
+            {publish && <div className="publish"><Button name="Publish" /></div>}
         </div>
     )
 }

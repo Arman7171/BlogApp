@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 10px;
+    z-index: 99;
 }
 
 .menu-section{
@@ -38,6 +39,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .menu-bottom-side{
@@ -55,4 +57,33 @@
     top: 4px;
     right: 2px;
     cursor: pointer;
+}
+
+.dropup-menu{
+    background: rgb(206, 206, 206);
+    border-radius: 10px;
+    padding: 3px 8px;
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    cursor: default;
+}
+
+.dropup-menu ul li{
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.dropup-menu ul li:hover{
+    color: rgb(63, 63, 63);
+}
+
+.current-user:hover > .dropup-menu{
+    visibility: visible;
+    opacity: 1;
 }

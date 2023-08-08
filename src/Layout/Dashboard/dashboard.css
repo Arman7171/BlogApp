@@ -5,5 +5,6 @@
     background-color: #F8F8F8;
     width: calc(100% - 75px);
     height: calc(100% - 60px);
-    padding: 15px 0px 0px 11px;
+    padding: 15px 15px 0px 11px;
+    overflow-y: auto;
 }

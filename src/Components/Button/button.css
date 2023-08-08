@@ -1,0 +1,27 @@
+.post-action-button{
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: .3s;
+    margin-right: 5px;
+}
+
+.post-action-button.cancel{
+    border-color: #FF0000;
+    color: #FF0000;
+}
+
+.post-action-button.cancel:hover{
+    background: #FF0000;
+    color: white;
+}
+
+.post-action-button .approval{
+    border-color: #061137;
+    color: #061137
+}
+
+.post-action-button.approval:hover{
+    background: #061137;
+    color: white;
+}

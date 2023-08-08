@@ -5,3 +5,14 @@
 html, body, .login, #root{
     height: 100%;
 }
+
+.post-action{
+    box-shadow: 0px 4px 4px 0px #00000040;
+    min-height: calc(100% - 10px);
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+.post-action input {
+    width: 100%;
+}

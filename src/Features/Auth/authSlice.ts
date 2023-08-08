@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import Cookies from 'js-cookie'
 
+
 export type authState = {
     token: string | null
   }
@@ -17,9 +18,14 @@ export type authState = {
       login: (state, action: PayloadAction<string>) => {
         state.token = action.payload
       },
+      logout: (state) => {
+        console.log('asd');
+        Cookies.remove('token')
+        state.token = null
+      }
     },
   })
 
-export const { login } = authSlice.actions
+export const { login, logout } = authSlice.actions
 
 export default authSlice.reducer

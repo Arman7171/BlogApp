@@ -1,7 +1,7 @@
 import { FC, useState } from "react"
 
 type InputProps = {
-    lable: string,
+    lable?: string,
     icon: string | boolean,
     type: string,
     required?: string,
