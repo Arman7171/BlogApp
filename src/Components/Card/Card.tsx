@@ -12,7 +12,7 @@ type CardProps = {
 }
 
 export const Card: FC<CardProps> = ({date, title, img, desc, publish, bigSize}) => {
-    
+
     return(
         <div className={`card ${bigSize ? 'big' : ''}`}>
             <img src={img} alt="" />

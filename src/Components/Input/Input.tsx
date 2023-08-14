@@ -7,12 +7,13 @@ type InputProps = {
     required?: string,
     register: Function,
     placeholder: string,
+    valueName?: string,
     errors: any
 }
 
-export const Input: FC<InputProps> = ({lable, icon, type, register, required, errors, placeholder}) => {
+export const Input: FC<InputProps> = ({lable, icon, type, register, required, errors, placeholder, valueName}) => {
     const [inputType, setInputType] = useState<string>(type)
-
+    
     const changeInputType = (): void => {        
         if(inputType==='password'){
             setInputType('text')
@@ -32,13 +33,13 @@ export const Input: FC<InputProps> = ({lable, icon, type, register, required, er
                     className={`shadow appearance-none border rounded w-[382px] h-[41px] py-2 pl-3 pr-9 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${icon ? 'pr-9' : 'pr-3'}`}
                     type={inputType} 
                     placeholder={placeholder}
-                    {...register(type, {required})}
+                    {...register(valueName || type, {required})}
                 />
                 {
                     icon && <img src={`${icon}`} alt={`${icon}`} {...(type === 'password' && { onClick: changeInputType })}className='absolute right-[12px] top-[14px] w-[20px] cursor-pointer' />
                 }
             </div>
-            <p className="text-red-500 text-xs italic mt-2">{errors[type]?.message}</p> 
+            <p className="text-red-500 text-xs italic mt-2">{errors[valueName || type]?.message}</p> 
         </div>
     )
 }

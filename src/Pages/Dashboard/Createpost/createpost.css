@@ -14,3 +14,9 @@
 .ql-editor{
     height: 400px !important;
 }
+
+.selectedimg{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}

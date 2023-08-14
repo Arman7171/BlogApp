@@ -1,9 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import authReducer from '@features/Auth/authSlice'
+import postsReducer from '@features/Posts/postsSlice'
+import { enableMapSet } from "immer";
 
+enableMapSet()
 export const store = configureStore({
   reducer: {
-    auth: authReducer
+    auth: authReducer,
+    posts: postsReducer
 },
 })
 
