@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import "./home.css";
 import { Card } from "@components/Card/Card";
 import Woman from "@assets/blogimg/woman.jpg";
@@ -9,6 +9,7 @@ import Tree from "@assets/blogimg/tree.jpg";
 import { useSelector } from "react-redux";
 import { postType } from "@features/Posts/postsSlice";
 import { selectAllPostbyFilter } from "@src/Selectors/PostSelect";
+import { Link } from "react-router-dom";
 
 export const Home: FC = () => {
   const posts = useSelector(selectAllPostbyFilter)
@@ -59,7 +60,7 @@ export const Home: FC = () => {
           <div className="grid md:grid-cols-4 grid-cols-1">
           {posts.get("draft")?.map((post: postType) => {
               return (
-                <div key={post.id} className="px-2">
+                <Link to={`/dashboard/viewpost/${post.id}`} key={post.id} className="px-2">
                   <Card
                     {...{
                       date: post.date,
@@ -68,7 +69,7 @@ export const Home: FC = () => {
                       publish: true,
                     }}
                   />
-                </div>
+                </Link>
               );
             })}
           </div>

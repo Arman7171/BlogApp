@@ -1,89 +1,94 @@
 .sidebar {
-    height: 100%;
-    position: fixed;
-    top: 0;
-    width: 75px;
-    background-color: #092704;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    z-index: 99;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 75px;
+  background-color: #092704;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  z-index: 99;
+  transition: 0.4s;
 }
 
-.menu-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.sidebar:hover {
+  width: 185px;
 }
 
-.menu-section img{
-    width: 33px;
-    height: 33px;
-    cursor: pointer;
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.underline{
-    height: 27px !important;
+.menu-section img {
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
 }
 
-.current-user{
-    background-color: #F8F8F8;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
+.underline {
+  height: 27px !important;
 }
 
-.menu-bottom-side{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.current-user {
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
 }
 
-.active-notification{
-    height: 8px;
-    width: 8px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-    top: 4px;
-    right: 2px;
-    cursor: pointer;
+.menu-bottom-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.dropup-menu{
-    background: rgb(206, 206, 206);
-    border-radius: 10px;
-    padding: 3px 8px;
-    height: 100px;
-    width: 150px;
-    position: absolute;
-    bottom: 35px;
-    left: 20px;
-    visibility: hidden;
-    opacity: 0;
-    transition: .5s;
-    cursor: default;
+.active-notification {
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  cursor: pointer;
 }
 
-.dropup-menu ul li{
-    cursor: pointer;
-    transition: 0.1s;
+.dropup-menu {
+  background: rgb(206, 206, 206);
+  border-radius: 10px;
+  padding: 3px 8px;
+  height: 100px;
+  width: 150px;
+  position: absolute;
+  bottom: 35px;
+  left: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  cursor: default;
 }
 
-.dropup-menu ul li:hover{
-    color: rgb(63, 63, 63);
+.dropup-menu ul li {
+  cursor: pointer;
+  transition: 0.1s;
 }
 
-.current-user:hover > .dropup-menu{
-    visibility: visible;
-    opacity: 1;
+.dropup-menu ul li:hover {
+  color: rgb(63, 63, 63);
+}
+
+.current-user:hover > .dropup-menu {
+  visibility: visible;
+  opacity: 1;
 }

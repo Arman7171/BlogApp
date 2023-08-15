@@ -12,6 +12,7 @@
       "@pages/*": ["./src/Pages/*"],
       "@components/*": ["./src/Components/*"],
       "@features/*": ["./src/Features/*"],
+      "@utils/*": ["./src/utils/*"],
       "@src/*": ["./src/*"]
     },
     

@@ -6,6 +6,8 @@ import type { RootState } from "@store/store";
 import { useSelector } from "react-redux";
 import { Home } from '@pages/Dashboard/Home/Home';
 import { CreatePost } from '@pages/Dashboard/Createpost/CreatePost';
+import { ViewPost } from '@pages/Dashboard/ViewPost/ViewPost';
+import { EditPost } from '@pages/Dashboard/EditPost/EditPost';
 
 export const Routing:FC = () => {
     const userAuth = useSelector((state: RootState) => state.auth.token);
@@ -22,6 +24,8 @@ export const Routing:FC = () => {
         <Routes>
             <Route path='/dashboard' element={ <Home /> } />
             <Route path='/dashboard/createpost' element={ <CreatePost /> } />
+            <Route path='/dashboard/viewpost/:postId' element={ <ViewPost /> } />
+            <Route path='/dashboard/editpost/:postId' element={ <EditPost /> } />
             <Route path='*' element={ <Navigate to="/dashboard" replace /> } />
         </Routes>
     )

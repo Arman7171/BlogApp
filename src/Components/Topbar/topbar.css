@@ -1,11 +1,24 @@
 .topbar {
-    position: fixed;
-    top: 0;
-    width: calc(100% - 75px);
-    right: 0;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 75px);
+  right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.return-text {
+  color: #2e5827;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+  transition: 0.2s;
+}
+
+.return-text:hover {
+  color: #2f7722;
 }

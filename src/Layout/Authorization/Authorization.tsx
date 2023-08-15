@@ -1,7 +1,7 @@
 import { FC } from "react"
 import Image from '@assets/img/login.png'
 import Logo from '@assets/img/AFSlogo.png'
-import { Routing } from "@src/Routeing"
+import { Routing } from "@src/Routing"
 
 export const Authorization: FC = () => {
     return(
